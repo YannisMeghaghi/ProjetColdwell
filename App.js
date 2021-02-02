@@ -15,7 +15,7 @@ export default function App() {
       </Text>
 
       
-      <Image
+      {/* <Image
         style={{
           width: 100,
           height: 100,
@@ -24,8 +24,17 @@ export default function App() {
           
         }}
         source={require("./assets/user.png")}
+      /> */}
+      <Image
+        style={{
+          width: 500,
+          height: 800,
+          left : 80,
+          top:-250
+          
+        }}
+        source={require("./assets/user.png")}
       />
-
       <Image 
         style={{
           width: 125,
