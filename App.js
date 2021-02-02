@@ -17,7 +17,7 @@ export default function App() {
       
       <Image
         style={{
-          width: 100,
+          width: 101,//100
           height: 100,
           left : 90,
           top:-25
