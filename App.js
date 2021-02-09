@@ -1,34 +1,13 @@
 import { setStatusBarBackgroundColor, StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Button, SafeAreaView, StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
+import FirstPageItems from './assets/components/FirstPage';
 
 export default function App() {
   return (
     <View style ={styles.background}>
 
-      <View style ={styles.topText}>
-        <Text style = {styles.title}>Êtes-vous</Text>
-      </View>
-
-      <View style ={styles.midElements}>
-
-        <View style = {styles.midButtons}>
-
-          <Button 
-            color = '#54AAEA'
-            title = "Un agent">
-          </Button>
-
-          <Button
-            color = '#54AAEA'  
-            title = "Un agent"
-            title = "Un particulier">
-          </Button>
-
-        </View>
-
-
-      </View>
+    <FirstPageItems/>
 
 
     </View>
@@ -42,27 +21,4 @@ const styles = StyleSheet.create({
 
   },
 
-  topText:{
-    alignItems : 'center',
-    marginTop : '30%',
-  },
-
-  title:{
-    fontSize: 40,
-    color : '#fff',
-  },
-  
-  midElements:{
-
-  },
-
-  midButtons:{
-    flexDirection : 'row',
-    justifyContent:'space-around',
-    marginTop:'75%',
-  },
-
-  agentButton:{
-    
-  }
 })
