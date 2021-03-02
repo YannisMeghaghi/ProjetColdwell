@@ -1,34 +1,36 @@
 import React from 'react';
-import {Text, View, Button} from 'react-native';
+import {Text, View, TouchableOpacity, Image} from 'react-native';
 import styles from './styles';
 
-const FirstPageItems = (props) => {
+const FirstPage = (props) => {
     return(
     <View>
 
-    <View style ={styles.topText}>
+        <View style ={styles.topText}>
         <Text style = {styles.title}>Êtes-vous</Text>
-    </View>
+      </View>
 
       <View style ={styles.midElements}>
 
-            <View style = {styles.midButtons}>
 
-                <Button
-                    color = '#54AAEA'
-                    title = "Un agent">
-                </Button>
+        <TouchableOpacity style = {styles.carre}>
+          <Image source = {require('../../user.png')} style = {styles.userStyle}/>
+        </TouchableOpacity>
 
-                <Button
-                    color = '#54AAEA'
-                    title = "Un particulier">
-                </Button>
+        <TouchableOpacity style = {styles.carre}>
+          <Image source = {require('../../iconAgent.png')} style = {styles.agentStyle}/>
+        </TouchableOpacity>
 
-            </View>
-        </View>
+      
+      </View>
+
+      <View style = {styles.midText}>
+        <Text style = {styles.textStyle}>Un particulier</Text>
+        <Text style = {styles.textStyle}>Un agent</Text>
+      </View>
+
     </View>
-
     );
 };
 
-export default FirstPageItems;
+export default FirstPage;
