@@ -4,7 +4,7 @@ import styles from './styles';
 
 const GeneralPage = (props) => {
     return(
-    <View>
+    <View style = {{backgroundColor:"#2AA5FF"}}>
         <View style ={styles.Deconnexion}>
 
         <TouchableOpacity style = {styles.boutons}>

@@ -4,6 +4,7 @@ const styles = StyleSheet.create({
     topText:{
         alignItems : 'flex-start',
         marginTop : '20%',
+        marginLeft : 10,
       },
     
       title:{
@@ -12,60 +13,50 @@ const styles = StyleSheet.create({
       },
     MiddleText:{
         alignItems : 'flex-start',
-        marginTop : '10%',},
+        marginTop : '10%',
+        marginLeft : 10,
+      },
         
         title2:{
             fontSize: 20,
             color : '#fff',
-        
-
-
-    },
-    ViewImage1:{
-        marginTop : '50%',
-        justifyContent : 'space-around',
-        flexDirection : 'row',
-
-
     },
 
-    ViewImage2:{
-        marginTop : '40%',
-        justifyContent : 'space-around',
-        flexDirection : 'row',
+    mainContainer:{
+      alignItems : 'center',
     },
 
-
-    
-      midButtons:{
-        flexDirection : 'row',
-        justifyContent : 'space-around',
-        marginTop : '0%',
-        marginLeft:'5%',
-        opacity : 100,
-        
-
+    secondContainer:{
+      flexDirection :'row',
+      justifyContent : 'space-between',
+      marginTop : 50,
       
-      },
-
-    midButtons2:{
-        flexDirection : 'row',
-        justifyContent : 'space-around',
-        marginTop : '0%',
-        marginLeft:'7%',
-        opacity : 100,
-        
-
-
     },
+
+    secondContainer2:{
+      flexDirection :'row',
+      justifyContent : 'space-between',
+      marginTop : 30,
       
-    Images:{
-        width :100,
-        height:100,
-        marginTop:'-20%'
+    },
+
+    carre:{
+      alignItems : "center",
+      justifyContent : "center",
+      backgroundColor : "#BBECFD",
+      borderRadius : 20,
+      width : 150,
+      height : 150,
+      marginLeft : 15,
+      marginRight : 15,
+    },
+
+    imageStyle:{
+      width: 110,
+      height : 110,
+    },
 
 
-    }
 });
 
 export default styles;

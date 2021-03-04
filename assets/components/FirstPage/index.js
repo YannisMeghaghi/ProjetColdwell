@@ -2,11 +2,10 @@ import React from 'react';
 import {Text, View, TouchableOpacity, Image} from 'react-native';
 import styles from './styles';
 
-const FirstPage = (props) => {
+const FirstPage = ({navigation}) => {
     return(
-    <View>
-
-        <View style ={styles.topText}>
+<View style = {{backgroundColor:"#2AA5FF"}} >
+      <View style ={styles.topText}>
         <Text style = {styles.title}>Êtes-vous</Text>
       </View>
 
@@ -14,14 +13,18 @@ const FirstPage = (props) => {
 
 
         <TouchableOpacity style = {styles.carre}>
-          <Image source = {require('../../user.png')} style = {styles.userStyle}/>
+          <View>
+            <Image source = {require('../../user.png')} style = {styles.userStyle} onPress={() => navigation.navigate('LoginPage')
+            }/>
+          </View>
+
         </TouchableOpacity>
 
         <TouchableOpacity style = {styles.carre}>
           <Image source = {require('../../iconAgent.png')} style = {styles.agentStyle}/>
         </TouchableOpacity>
 
-      
+
       </View>
 
       <View style = {styles.midText}>
@@ -29,7 +32,8 @@ const FirstPage = (props) => {
         <Text style = {styles.textStyle}>Un agent</Text>
       </View>
 
-    </View>
+
+</View>
     );
 };
 

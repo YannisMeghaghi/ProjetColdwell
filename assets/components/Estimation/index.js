@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Text, View, Button, TextInput,TouchableOpacity} from 'react-native';
+import {Text, View, Button, TextInput,TouchableOpacity, Image} from 'react-native';
 
 import styles from './styles';
 
@@ -16,7 +16,7 @@ const Estimation = (props) => {
     );
 
     return(
-    <View>
+    <View style = {{backgroundColor:"#2AA5FF"}}>
 
     <View style ={styles.topText}>
         <Text style = {styles.title}>Estimation</Text>
@@ -67,6 +67,7 @@ const Estimation = (props) => {
             </View>
 
         </View>
+
     </View>
 
     );

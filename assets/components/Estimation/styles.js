@@ -55,14 +55,8 @@ const styles = StyleSheet.create({
         backgroundColor : "#B6DDFA",
      },
 
-
-
-
-      
-        
-        
-   },
-
+    
+},
 );
 
 export default styles;

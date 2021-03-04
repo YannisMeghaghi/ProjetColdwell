@@ -1,6 +1,10 @@
+import 'react-native-gesture-handler';
+import * as React from 'react'
+import {NavigationContainer} from "@react-navigation/native";
 import { setStatusBarBackgroundColor, StatusBar } from 'expo-status-bar';
-import React from 'react';
 import { Button, SafeAreaView, StyleSheet, Text, View, Image, ImageBackground, TextInput, Slider, TouchableOpacity, ScrollView, Touchable } from 'react-native';
+
+import {createStackNavigator} from '@react-navigation/stack'
 import FirstPage from './assets/components/FirstPage';
 import GeneralPage from './assets/components/GeneralPage';
 import ListeAgence from './assets/components/ListeAgence';
@@ -10,12 +14,13 @@ import HomePageItems from './assets/components/HomePageItems';
 import LoginPage from './assets/components/LoginPage';
 
 
+
 export default function App() {
   return (
-  <View style ={styles.background}>
-    <LoginPage/>
-  </View>
-  );
+<View style = {styles.background}>
+  <Estimation/>
+</View>
+  )
 };
 
 const styles = StyleSheet.create({

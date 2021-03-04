@@ -4,7 +4,7 @@ import styles from './styles';
 
 const ListeAgence = (props) => {
     return(
-        <View>
+        <View style = {{backgroundColor:"#2AA5FF"}}>
             <View style = {styles.topText}>
       <Text style = {styles.textStyle}>Liste des Agences</Text>
     </View>  
@@ -90,9 +90,7 @@ const ListeAgence = (props) => {
         
       </View>
 </ScrollView>
-<View>
-  <Text style = {{fontSize : 17}}>BONJOUR IL FAUT METTRE LE BOUTON RETOUR</Text>
-</View>
+
         </View>
     );
     };

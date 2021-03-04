@@ -15,16 +15,16 @@ import styles from './styles';
 /*export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");*/
-  const LoginPage = (props) => {
+  const LoginPage = (navigation) => {
       return(
     <View style={styles.container}>
-      
+
        <View>
         <Image style = {styles.image} 
-          source = {require ('../../Coldwell.png')}         
+          source = {require ('../../Coldwell.png')}
         /> 
       </View> 
-      
+
 
       <StatusBar style="auto" />
       <View style={styles.inputView}>
@@ -62,7 +62,7 @@ import styles from './styles';
         <Text style={styles.forgot_button}>Connexion sans compte</Text>
       </TouchableOpacity>
 
-      
+
     </View>
   );
 }

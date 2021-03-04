@@ -1,6 +1,9 @@
 import { StyleSheet } from 'react-native';
 
 const styles2 = StyleSheet.create({
+    background:{
+      backgroundColor :'#2AA5FF',
+    },
     Deconnexion:{
         flexDirection : "row-reverse",
         marginTop : '12%',

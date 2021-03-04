@@ -1,6 +1,11 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
+  background:{
+    flex:1,
+    backgroundColor:"#2AA5FF",
+  },
+  
   topText:{
     alignItems : 'center',
     marginTop : '30%',

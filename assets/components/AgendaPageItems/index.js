@@ -5,7 +5,7 @@ import styles from './styles';
 
 const AgendaPageItems = (props) => {
     return(
-    <View>
+    <View style = {{backgroundColor:"#2AA5FF"}}>
 
         <View style ={styles.topText}>
             <Text style = {styles.title}>Disponibilités</Text>
