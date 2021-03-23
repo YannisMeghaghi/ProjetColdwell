@@ -1,8 +1,14 @@
 import React from 'react';
-import {Text, View, Image, TextInput, Slider, TouchableOpacity, ScrollView,} from 'react-native';
+import { render } from 'react-dom';
+import {Text, View, Image, TextInput, Slider, TouchableOpacity, ScrollView, Button} from 'react-native';
 import styles from './styles';
 
-const GeneralPage = (props) => {
+const GeneralPage = ({navigation}) => {
+  
+  const pressVendre = () => {
+    navigation.navigate('HomePageItems')
+  }
+
     return(
     <View style = {{backgroundColor:"#2AA5FF"}}>
         <View style ={styles.Deconnexion}>
@@ -39,15 +45,12 @@ const GeneralPage = (props) => {
 
       <View style = {styles.prixSlider}>
         <Text style = {styles.textPrix}>Prix  0€</Text>
-        <Slider 
-        style = {styles.sliderStyle}
-        minimumTrackTintColor = "#fff"
-        maximumTrackTintColor = "#fff">
-
-        </Slider>
+        
         <Text style = {styles.textPrix}>10 000 000€</Text>
       </View>
-
+<View>
+  <Text>Bonjouur : {navigation.getParam('email')}</Text>
+</View>
 <ScrollView>
       <View style = {{alignItems : "center"}}>
         <TouchableOpacity style = {styles.rectangle}>
@@ -96,6 +99,13 @@ const GeneralPage = (props) => {
         </TouchableOpacity>
       </View>
 </ScrollView>
+
+  <View style = {{flexDirection: 'row', justifyContent : 'center', alignItems: 'center'}}>
+      <Button title = 'Vendre' onPress= {pressVendre}/>
+      <Button title = 'Acheter'/>
+      <Button title = 'Affaires'/>
+  </View>
+
 </View>
     );
 };

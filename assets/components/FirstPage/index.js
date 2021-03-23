@@ -3,19 +3,22 @@ import {Text, View, TouchableOpacity, Image} from 'react-native';
 import styles from './styles';
 
 const FirstPage = ({navigation}) => {
+
+  const pressParticulier = () => {
+    navigation.navigate('LoginPage')
+  }
     return(
 <View style = {{backgroundColor:"#2AA5FF"}} >
       <View style ={styles.topText}>
-        <Text style = {styles.title}>Êtes-vous</Text>
+        <Text style = {styles.title}>Vous êtes</Text>
       </View>
 
       <View style ={styles.midElements}>
 
 
-        <TouchableOpacity style = {styles.carre}>
+        <TouchableOpacity style = {styles.carre} onPress = {pressParticulier}>
           <View>
-            <Image source = {require('../../user.png')} style = {styles.userStyle} onPress={() => navigation.navigate('LoginPage')
-            }/>
+            <Image source = {require('../../user.png')} style = {styles.userStyle}/>
           </View>
 
         </TouchableOpacity>

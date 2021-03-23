@@ -8,14 +8,29 @@ import {
   TextInput,
   Button,
   TouchableOpacity,
+  FlatList
 } from "react-native";
+
+import GeneralPage from "../GeneralPage";
 
 import styles from './styles';
 
-/*export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");*/
-  const LoginPage = (navigation) => {
+
+
+
+
+  const LoginPage = ({navigation}) => {
+
+    const pressHandler = () => {
+      navigation.navigate('GeneralPage')
+    }
+    const [account, setAccount] = useState([
+      { email : 'Yannis', password : 'MDP'}
+    ])
+
+    /*const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");*/
+
       return(
     <View style={styles.container}>
 
@@ -25,16 +40,18 @@ import styles from './styles';
         /> 
       </View> 
 
-
       <StatusBar style="auto" />
-      <View style={styles.inputView}>
-        <TextInput
-          style={styles.TextInput}
-          placeholder="Email"
-          placeholderTextColor="#003f5c"
-          onChangeText={(email) => setEmail(email)}
-        />
-      </View>
+
+        <View style={styles.inputView}>
+          <TextInput
+            style={styles.TextInput}
+            placeholder="Email"
+            placeholderTextColor="#003f5c"
+            onChangeText={(text) => item.email = text}
+          />
+        </View>
+
+
 
       <View style={styles.inputView}>
         <TextInput
@@ -42,13 +59,15 @@ import styles from './styles';
           placeholder="Password"
           placeholderTextColor="#003f5c"
           secureTextEntry={true}
-          onChangeText={(password) => setPassword(password)}
+          onChangeText={(text) => item.password = text}
         />
       </View>
 
-      <TouchableOpacity style={styles.loginBtn}>
+
+      <TouchableOpacity style={styles.loginBtn} onPress ={navigation.navigate('GeneralPage')}>
         <Text style={styles.loginText}>CONNEXION</Text>
       </TouchableOpacity>
+
 
       <TouchableOpacity>
         <Text style={styles.forgot_button}>Mot de passe oublié ?</Text>

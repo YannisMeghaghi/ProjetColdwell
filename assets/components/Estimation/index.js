@@ -7,8 +7,12 @@ import styles from './styles';
 
 
 
-const Estimation = (props) => {
+const Estimation = ({navigation}) => {
 
+    
+    const pressAgence = () => {
+        navigation.navigate('ListeAgence')
+      }
     const AppButton = ({ onPress, title }) => (
         <TouchableOpacity onPress={onPress} style={styles.appButtonContainer}>
           <Text style={styles.appButtonText}>{title}</Text>
@@ -62,7 +66,8 @@ const Estimation = (props) => {
 
                 <Button
                     color="#2AFFFF"
-                    title="Estimation précise en agence !">
+                    title="Estimation précise en agence !"
+                    onPress = {pressAgence}>
                 </Button>
             </View>
 
